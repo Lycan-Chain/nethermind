@@ -15,7 +15,7 @@ public class Secp256r1Precompile : IPrecompile<Secp256r1Precompile>
 {
     private const int RequiredInputLength = 160;
     private static readonly byte[] ValidResult = new byte[] { 1 }.PadLeft(32);
-    private static readonly byte[] InvalidResult = new byte[] { 0 }.PadLeft(32);
+    private static readonly byte[] InvalidResult = [];
 
     public static readonly Secp256r1Precompile Instance = new();
     public static Address Address { get; } = Address.FromNumber(0x100);
